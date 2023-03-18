@@ -2,6 +2,8 @@ import HomePage from './HomePage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Employees from './Employees';
 import Departments from './Departments';
+import DepartmentForm from './DepartmentForm';
+import EmployeeForm from './EmployeeForm';
 
 function EmsApp() {
 	return (
@@ -13,6 +15,8 @@ function EmsApp() {
 				<Route path="/" element={<HomePage />} />
 				<Route path="/employees" element={<Employees />} />
 				<Route path="/departments" element={<Departments />} />
+				<Route path="departments/:id" element={<DepartmentForm />} />
+				<Route path="/employees/:id" element={<EmployeeForm />} />
 			</Routes>
 		</BrowserRouter>
 	);
